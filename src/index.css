@@ -3,7 +3,9 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -22,26 +24,107 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
+}
+
+/* My Css configuration */
+h1 {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgb(22, 83, 136);
+  color: white;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 35%;
+  padding-top:10rem;
+  width: 40rem;
+}
+.quote {
+  margin:auto 2rem;
+  font-size: 2rem;
+  color: rgb(1, 112, 156);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button {
+  width: 7rem;
+  height: 2rem;
+}
+.slide-btns{
+  position: relative;
+  top:3rem;
+
+}
+
+.quote-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.quote-box p:last-of-type {
+  margin-top: 1rem;
+}
+.reset {
+  margin-top: 3rem;
+  background: none;
+  border: none;
+  padding: 10px;
+  display: inline-flex;   
+  justify-content: center; 
+  align-items: center;     
+  cursor: pointer;      
+}
+
+.reset:focus {
+  outline: none;           
+}
+
+.reset svg {
+  display: block;         
 }
