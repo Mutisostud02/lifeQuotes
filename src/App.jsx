@@ -6,6 +6,7 @@ import { mdiRestore } from "@mdi/js";
 
 function App() {
   const [quoteIndex, setQuoteIndex] = useState(0);
+  const [val, setVal] = useState(0)
   console.log(lifeQuotes.length)
   function handleNextClick() {
     if (quoteIndex < lifeQuotes.length - 1) {
@@ -20,10 +21,27 @@ function App() {
   function handleReset() {
     setQuoteIndex(0);
   }
+  function handleInputChange(e) {
+    setVal(e.target.value)
+  }
+  function handleSubmit(e) {
+    e.preventDefault()
+    const newIndex = Number(val)
+    if(newIndex >= 0 && newIndex < lifeQuotes.length) {
+    setQuoteIndex(newIndex)
+    }
+    setVal("");    
+  }
   return (
     <>
       <h1>LIFE QUOTES APP</h1>
       <div className="content">
+        <form onSubmit={(e)=>handleSubmit(e)}>
+        <label>View Quote at {" "}
+          <input type="number" value={val} onChange={(e)=>handleInputChange(e)}/>
+        </label>
+        <button type="submit">OK</button>
+        </form>
         <div className="body">
           <button disabled={quoteIndex === 0} onClick={handlePrevClick} className="slide-btns">
             Prev

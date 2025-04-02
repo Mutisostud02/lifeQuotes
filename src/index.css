@@ -83,14 +83,14 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-inline: 35%;
-  padding-top:10rem;
+  padding-top:8rem;
   width: 40rem;
 }
 .quote {
   margin:auto 2rem;
   font-size: 2rem;
   color: rgb(1, 112, 156);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 }
 button {
   width: 7rem;
@@ -127,4 +127,8 @@ button {
 
 .reset svg {
   display: block;         
+}
+label {
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
